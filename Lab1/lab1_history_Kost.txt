@@ -1,0 +1,85 @@
+    1  whoami
+    2  whoaim
+    3  echo "Hello World"
+    4  data
+    5  date
+    6  cal
+    7  man cal
+    8  clear
+    9  pwd
+   10  cd /
+   11  cd ..
+   12  pwd
+   13  ls
+   14  ls /var
+   15  ls -l
+   16  mkdir fruits
+   17  cd
+   18  mkdir fruits
+   19  cd /
+   20  mkdir ~/animals
+   21  touch /tmp/temp
+   22  cd fruits/
+   23  ls 
+   24  cd tmp
+   25  ls
+   26  cd ..
+   27  cd
+   28  ls
+   29  cd fruits/
+   30  touch apple banana pineaple lion
+   31  touch ~/animals/{cat.txt,dog.txt,elephant.txt}
+   32   ls -l | grep apple
+   33  ls b*
+   34  ls *a
+   35  ls b* i*
+   36  cp /etc/passwd
+   37  cp /etc/passwd ~
+   38  cat /etc/issue > apple
+   39  cat apple
+   40  mv lion ~/animals
+   41  mv pineaple pineappl
+   42  wc -l /etc/passwd
+   43  cd ~
+   44  ln -s /etc/passwd passwd_link
+   45  ln .bash_history history_hard
+   46   ls -l .bash_history
+   47   mkdir rmme
+   48  rmdir rmme
+   49  rmdir fruits
+   50  rm -r fruits
+   51  cat /etc/passwd /var/log/boot.log
+   52   cp /etc/init.d/ ~
+   53  cp -r /etc/init.d/ ~
+   54  rm -r init.d/
+   55  man less
+   56  man head
+   57  man column
+   58  cut -d: -f1,3 /etc/passwd | column -ts: | less
+   59  grep :/bin/bash /etc/passwd | wc -l
+   60  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -r
+   61  rpm -ql man-db | xargs -l du 2> /dev/null | sort -n
+   62  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11, 5
+   63   top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+   64  cut -d: -f1,7 /etc/passwd |  tr ":" " " | sort -k1
+   65  yum install git
+   66  sudo yum install git
+   67  su -
+   68  yum install -y git
+   69  cd /usr/share/doc/git
+   70  su -
+   71  cd /usr/share/doc/git-*
+   72  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+   73  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+   74  cd
+   75  ping ya.ru
+   76   curl wttr.in
+   77  hostname -I
+   78  curl ifconfig.me
+   79  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+   80  less README-ru.md
+   81   sudo id
+   82  less /var/log/messages
+   83  sudo less /var/log/messages
+   84  su
+   85  history > lab1_history_Kost.txt
