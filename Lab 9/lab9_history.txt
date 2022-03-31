@@ -1,0 +1,95 @@
+    1  ps xaf
+    2  ps xawf -eo pid,user,cgroup,args
+    3  systemd-cgls
+    4  ll -l /usr/lib/systemd/system/
+    5  ls -l /run/systemd/system/
+    6  ls -l /etc/systemd/system/
+    7  systemctl -t help
+    8  systemctl status
+    9  systemctl --type=service
+   10  systemctl list-dependencies --after auditd.service
+   11  systemctl list-dependencies --after ccounts-daenon.service
+   12  systemctl list-dependencies --before auditd.service
+   13  systemctl list-dependencies --before accounts-daenon.service
+   14  systemctl list-units --type=service
+   15  systemctl list-units --type=service --all
+   16  systemctl list-units --type=socket --all
+   17  systemctl list-units --type=target --all
+   18  systemctl list-units --type=device --all
+   19  systemctl list-units --type=mount --all
+   20  systemctl list-units --type=automount --all
+   21  systemctl list-units --type=swap --all
+   22  systemctl list-unit-files --type=service
+   23  systemctl list-unit-files --type=service --all
+   24  systemctl list-unit-files --type=socket --all
+   25  systemctl list-unit-files --type=target --all
+   26  systemctl list-unit-files --type=device --all
+   27  systemctl list-unit-files --type=mount --all
+   28  systemctl list-unit-files --type=automount --all
+   29  systemctl list-unit-files --type=swap --all
+   30  systemctl --failed --type=service
+   31  systemctl --failed --type=socket
+   32  systemctl --failed --type=target
+   33  systemctl --failed --type=device
+   34  systemctl --failed --type=mount
+   35  systemctl --failed --type=automount
+   36  systemctl --failed --type=swap
+   37  yum install httpd -y
+   38  yum install apache2 -y
+   39  systemctl status httpd.service
+   40  curl 127.0.0.1
+   41  systemctl start httpd.service
+   42  systemctl status httpd.service
+   43  systemctl restart httpd.service
+   44  systemctl status httpd.service
+   45  systemctl stop httpd.service
+   46  systemctl enable httpd.service
+   47  systemctl status httpd.service
+   48  systemctl start httpd.service
+   49  systemctl status httpd.service
+   50  systemctl disable httpd.service
+   51  systemctl mask httpd.service
+   52  systemctl status httpd.service
+   53  systemctl start httpd.service
+   54  systemctl unmask httpd.service
+   55  systemctl list-units --type=target
+   56  systemctl list-units --type=target --all
+   57  systemctl get-default
+   58  ls -l /etc/systemd/system/default.target
+   59  systemctl set-default multi-user.target
+   60  systemctl isolate multi-user.target
+   61  systemctl set-default graphical.target
+   62  systemctl --no-wall rescue
+   63  systemctl --no-wall emergency
+   64  systemctl poweroff
+   65  systemctl halt
+   66  systemctl --no-wall poweroff
+   67  shutdown --poweroff 17:50
+   68  shutdown --halt +2
+   69  shutdown -c
+   70  systemctl --no-wall reboot
+   71  systemctl suspend
+   72  systemctl hibernate
+   73  systemctl default
+   74  hostnamectl
+   75  timedatectl
+   76  localectl
+   77  loginctl
+   78  loginctl session-status 2
+   79  loginctl show-user vlados_korch
+   80  nano mephi.service
+   81  cat mephi.service
+   82  ls -lZ mephi.service
+   83  journalctl
+   84  journalctl -b
+   85  ausearch -c 'systemd' --raw | audit2allow -M my-systemd
+   86  semodule -X 300 -i my-systemd.pp
+   87  ausearch -m avc -ts recent
+   88  systemctl start mephi.service
+   89  journalctl -u mephi.service
+   90  nano mephi.path
+   91  cat mephi.path
+   92  systemctl enable mephi.path
+   93  systemctl start mephi.path
+   94  touch /tmp/mephi.file
+   95  history > lab9.txt
